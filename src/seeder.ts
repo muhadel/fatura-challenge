@@ -14,8 +14,6 @@ seeder({
     MongooseModule.forRoot(mongodbConfig.uri, mongodbConfig.mongooseOptions),
     MongooseModule.forFeature([{ name: 'Role', schema: RoleSchema }]),
     MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]),
-    MongooseModule.forFeature([
-      { name: 'RevokedToken', schema: RevokedTokenSchema },
-    ]),
+    MongooseModule.forFeature([{ name: 'RevokedToken', schema: RevokedTokenSchema }]),
   ],
 }).run([RolesSeeder, UserSeeder, RevokeTokensSeeder]);
